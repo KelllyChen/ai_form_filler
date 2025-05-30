@@ -4,12 +4,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-USE_MOCK = os.getenv("USE_MOCK", "false").lower() == "true"
+
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 def query_llm(prompt: str) -> str:
+    USE_MOCK = os.getenv("USE_MOCK", "false").lower() == "true"
     if USE_MOCK:
         return mock_response(prompt)
     
