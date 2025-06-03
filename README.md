@@ -37,7 +37,20 @@ pip install -e .
 formfiller fill-form --template example_inputs/form.json --profile example_inputs/resume.pdf --position "AI Intern" --jb example_inputs/jb.txt --output output/filled_form.json
 ```
 
+## Testing
+
+Run tests:
+
+```bash
+pytest
+```
+
+Check test coverage:
+
+```bash
+coverage run -m pytest
+coverage report -m
+```
 
 
-## Requirements
 
