@@ -1,5 +1,6 @@
 import click
-from form_filler import fill_form
+from formfiller.form_filler import fill_form
+
 
 @click.group()
 def cli():
@@ -19,6 +20,9 @@ def fill_form_command(template, profile, position, jb, output):
         click.echo(f"From filled successfully! Save to {output}")
     except Exception as e:
         click.echo(f"Error:{e}")
+
+def main():
+    cli()
 
 if __name__=="__main__":
     cli()

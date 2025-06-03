@@ -1,7 +1,7 @@
 import json
 import os
 from PyPDF2 import PdfReader
-from llm_api import query_llm
+from formfiller.llm_api import query_llm
 
 
 def extract_text_from_pdf(pdf_path):
